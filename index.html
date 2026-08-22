@@ -89,6 +89,28 @@
     .feat p{font-size:14.5px;color:var(--teal-soft)}
     .feat:hover{transform:translateY(-3px);box-shadow:0 16px 40px -28px rgba(5,46,43,.4);transition:transform .25s ease,box-shadow .25s ease}
 
+    /* ---------- screenshots ---------- */
+    .shots{padding:8px 0 72px;text-align:center}
+    .shots h2{font-family:var(--disp);font-weight:650;font-size:clamp(24px,3.4vw,34px)}
+    .shots p.sub{color:var(--teal-soft);margin-top:8px}
+    .phones{display:flex;gap:36px;justify-content:center;align-items:flex-start;margin-top:40px;flex-wrap:wrap}
+    .phone{width:min(300px,80vw);border-radius:38px;padding:10px;background:var(--ink);
+      box-shadow:0 30px 70px -34px rgba(5,46,43,.5);transition:transform .3s ease}
+    .phone img{width:100%;display:block;border-radius:30px}
+    .phone:first-child{transform:rotate(-2deg)}
+    .phone:last-child{transform:rotate(2deg) translateY(22px)}
+    .phone:hover{transform:rotate(0) translateY(-6px)}
+    .phone figcaption{color:var(--mint);font-family:var(--mono);font-size:12px;padding:10px 0 4px}
+
+    /* ---------- QR download ---------- */
+    .getit{background:var(--ink);color:var(--mint);padding:64px 0}
+    .getit .wrap{display:flex;gap:44px;align-items:center;justify-content:center;flex-wrap:wrap}
+    .qrbox{background:#fff;border-radius:20px;padding:16px;width:172px;height:172px;flex:none}
+    .qrbox svg,.qrbox img{width:100%;height:100%;display:block}
+    .getit h2{font-family:var(--disp);font-weight:650;font-size:clamp(22px,3vw,30px);color:#fff}
+    .getit p{margin-top:10px;max-width:40ch;opacity:.85;font-size:15px}
+    .getit .hint{margin-top:14px;font-family:var(--mono);font-size:12.5px;color:var(--green)}
+
     /* ---------- receipt strip ---------- */
     .receipt{background:var(--mint);padding:56px 0;text-align:center}
     .receipt p.big{font-family:var(--disp);font-weight:500;font-size:clamp(20px,3vw,28px);max-width:34ch;margin:0 auto}
@@ -166,6 +188,34 @@
       <div class="feat"><div class="ico">🥦</div><h3>A score you can trust</h3><p>A 1–10 NuSee Score with a full "Why this score" breakdown and citations, personalized to your allergies and diet.</p></div>
       <div class="feat"><div class="ico">🏷️</div><h3>Real prices. Real deals.</h3><p>Prices at your store and the stores nearby, shopper-verified drops, and healthier swaps — decided in front of the shelf.</p></div>
     </section>
+  </div>
+
+  <div class="wrap">
+    <section class="shots">
+      <h2>Straight from the aisle</h2>
+      <p class="sub">A real scan — flagged ingredients, allergen alerts, and healthier swaps with store availability.</p>
+      <div class="phones">
+        <figure class="phone">
+          <img src="/assets/shot-scan.png" alt="NuSee scan result: Korean style crunchy chicken scores 35, corn syrup and added sugars flagged, allergen alert for wheat, soy and eggs" loading="lazy">
+          <figcaption>scan → score → flags</figcaption>
+        </figure>
+        <figure class="phone">
+          <img src="/assets/shot-swaps.png" alt="NuSee health impact and healthier alternatives: plant-based tenders scoring 75 and 70 with store availability and add-to-cart" loading="lazy">
+          <figcaption>swaps → stores → cart</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <div class="getit">
+    <div class="wrap">
+      <div class="qrbox"><img src="/assets/qr-appstore.svg" alt="QR code linking to NuSee on the App Store"></div>
+      <div>
+        <h2>Get NuSee on your iPhone</h2>
+        <p>Point your camera at this code — it takes you straight to NuSee on the App Store.</p>
+        <p class="hint">launching soon — the code goes live with the app</p>
+      </div>
+    </div>
   </div>
 
   <div class="receipt">
