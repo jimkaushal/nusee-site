@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NuSee — Smart Grocery Scanner</title>
-  <meta name="description" content="Point your camera at any grocery product. See a 1–10 health score, live prices at your stores, and a healthier swap — instantly, right in the aisle.">
+  <title>NuSee — AI Grocery Scanner</title>
+  <meta name="description" content="Point your camera at any grocery product. NuSee's AI identifies it on sight — health score, live prices at your stores, and a healthier swap, instantly in the aisle.">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -30,7 +32,14 @@
       background:rgba(251,253,252,.22);pointer-events:none}
     @media (prefers-reduced-motion:reduce){.bgvid{display:none}}
 
-    nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+    /* frosted panels so content reads over the raw video */
+    .glass{background:rgba(251,253,252,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+      border-radius:26px;border:1px solid rgba(255,255,255,.5)}
+    .hero-copy{padding:36px}
+    .shots .head{display:inline-block;padding:22px 34px}
+
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;margin-top:16px;
+      background:rgba(251,253,252,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:18px}
     .logo{font-family:var(--disp);font-weight:650;font-size:24px;color:var(--ink);text-decoration:none}
     .logo span{color:var(--teal)}
     nav .links a{margin-left:22px;font-size:14px;text-decoration:none;color:var(--teal-soft)}
@@ -154,14 +163,14 @@
     </nav>
 
     <section class="hero">
-      <div>
-        <h1>Point your camera.<br><em>Know instantly.</em><br>Save every trip.</h1>
-        <p class="lede">NuSee turns your phone into a smart shopping companion for the grocery aisle — what it is, how healthy it is, and what it costs at the stores around you.</p>
+      <div class="glass hero-copy">
+        <h1>Point your camera.<br><em>AI sees the rest.</em><br>Save every trip.</h1>
+        <p class="lede">NuSee's AI vision identifies any grocery product on sight — how healthy it is, what it costs at the stores around you, and what to grab instead. No typing, no searching. Just look.</p>
         <span class="soon"><span class="dot"></span>Coming soon to the App Store</span>
       </div>
       <div class="scanwrap">
         <div class="scancard" aria-label="Example of a NuSee scan: Greek yogurt scores 8 out of 10, cheapest at Kroger">
-          <span class="scantag">Live scan</span>
+          <span class="scantag">AI live scan</span>
           <div class="prod">
             <div class="art" aria-hidden="true">🥛</div>
             <div><b>Plain Greek Yogurt</b><small>32 oz · no additives · high protein</small></div>
@@ -187,7 +196,7 @@
 
   <div class="science">
     <div class="wrap">
-      <span>Every score built on published science —</span>
+      <span>AI-powered scoring, grounded in published science —</span>
       <span class="chip">Nutri-Score 2023</span>
       <span class="chip">NOVA classification</span>
       <span class="chip">EFSA · IARC additive research</span>
@@ -197,16 +206,18 @@
 
   <div class="wrap">
     <section class="features">
-      <div class="feat"><div class="ico">📷</div><h3>Scan anything, hands-free</h3><p>Live camera, barcodes, ingredient labels, receipts. No tapping, no typing — results while the product is still in your hand.</p></div>
-      <div class="feat"><div class="ico">🥦</div><h3>A score you can trust</h3><p>A 1–10 NuSee Score with a full "Why this score" breakdown and citations, personalized to your allergies and diet.</p></div>
-      <div class="feat"><div class="ico">🏷️</div><h3>Real prices. Real deals.</h3><p>Prices at your store and the stores nearby, shopper-verified drops, and healthier swaps — decided in front of the shelf.</p></div>
+      <div class="feat"><div class="ico">📷</div><h3>AI vision, hands-free</h3><p>Live AI camera reads products, barcodes, ingredient labels, and receipts on sight — results while the item is still in your hand.</p></div>
+      <div class="feat"><div class="ico">🥦</div><h3>An AI score you can trust</h3><p>AI reads the label; published science does the math. A 1–10 NuSee Score with a full "Why this score" breakdown, personalized to your allergies and diet.</p></div>
+      <div class="feat"><div class="ico">🏷️</div><h3>AI-found prices &amp; deals</h3><p>AI hunts prices at your store and the stores nearby, verifies drops with real shoppers, and suggests healthier swaps — in front of the shelf.</p></div>
     </section>
   </div>
 
   <div class="wrap">
     <section class="shots">
-      <h2>Straight from the aisle</h2>
-      <p class="sub">A real scan — flagged ingredients, allergen alerts, and healthier swaps with store availability.</p>
+      <div class="glass head">
+        <h2>Straight from the aisle</h2>
+        <p class="sub">A real AI scan — flagged ingredients, allergen alerts, and healthier swaps with store availability.</p>
+      </div>
       <div class="phones">
         <figure class="phone">
           <img src="/assets/shot-scan.png" alt="NuSee scan result: Korean style crunchy chicken scores 35, corn syrup and added sugars flagged, allergen alert for wheat, soy and eggs" loading="lazy">
@@ -233,7 +244,7 @@
 
   <div class="receipt">
     <div class="wrap">
-      <p class="big">Every scan and every receipt quietly makes prices more accurate for every shopper.</p>
+      <p class="big">Every scan and every receipt quietly teaches the AI — prices get more accurate for every shopper.</p>
       <p class="small">crowd-checked · updated all day · your data never sold</p>
     </div>
   </div>
